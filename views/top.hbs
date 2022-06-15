@@ -1,0 +1,48 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>User list</title>
+</head>
+<body>
+  <p><a href="/create">ユーザ追加</a></p>
+
+  <table id="skills">
+    <thead style="text-align:center;">
+      <tr>
+        <th class="item">
+          <input type="checkbox" id="skills.f" value="1" onclick="gapClick(this);">
+        </th>
+        <th class="item" rowspan="2">器術</th>
+        <th class="item" rowspan="2">
+          <input type="checkbox" id="skills.damage.check0" onclick="setDamage(this);" value="0" class>
+        </th>
+        <th class="item">
+          <input type="checkbox" id="skills.a" value="1" onclick="gapClick(this);">
+        </th>
+      </tr>
+      <tr>
+        <th class="item">
+          <span id="skills.fspan">&nbsp;</span>
+        </th>
+      </tr>
+      {{! usersという名前でオブジェクト配列が渡ってきている前提 }}
+      <tbody>
+        <tr id="skills.row0">
+          <td class="spacer">
+            <span id="skills.row0.f">&nbsp;</span>
+          </td>
+          <td class="input skillcol" colspan="2">
+            <span class="clickcolumn" onclick="colClick(this);" id="skills.row0.name0">絡繰術</span>
+            <input type="checkbox" id="skills.row0.check0" value="0">
+          </td>
+        </tr>
+
+      </tbody>
+
+      {{#if name}}
+      <p>if文はこんな感じです</p>
+      {{/if}}
+    </thred>
+  </table>
+</body>
+</html>
